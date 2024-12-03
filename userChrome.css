@@ -1,0 +1,47 @@
+/* Unread email style */
+#threadTree tr[data-properties~="unread"]:not([class~="selected"]):not(:hover)
+{
+  color: #008000 !important;
+  background-color: #d8e5d8 !important;
+  text-transform: uppercase !important;
+}
+#threadTree tr[data-properties~="unread"][class~="selected"],
+#threadTree tr[data-properties~="unread"]:hover
+{
+  text-transform: uppercase !important;
+}
+/* -------------------- */
+
+/* Collapsed thread with unread emails unselected, not hovered*/
+#threadTree tr[data-properties~="hasUnread"][class~="collapsed"][class~="children"]:not([class~="selected"]):not(:hover)
+{
+  background-color: #d8e5d8 !important;
+  text-transform: uppercase !important;
+}
+/* -------------------- */
+
+/* Collapsed thread with unread emails selected or hovered*/
+#threadTree tr[data-properties~="hasUnread"][class~="collapsed"][class~="children"][class~="selected"],
+#threadTree tr[data-properties~="hasUnread"][class~="collapsed"][class~="children"]:hover
+{
+  text-transform: uppercase !important;
+}
+/* -------------------- */
+
+/* Use calendar icon on 3 folders */
+#folderTree li[id="all-aW1hcDovL2RhcmlvLm5lcmklNDBzb3VyY2VzZW5zZS5jb21AaW1hcC5nbWFpbC5jb20vMDAgLSBFVkVOVEkvZC5uZXJpLmd1ZXN0QHBvc3RlaXRhbGlhbmUuaXQ="] > .container > .icon,
+#folderTree li[id="all-aW1hcDovL2RhcmlvLm5lcmklNDBzb3VyY2VzZW5zZS5jb21AaW1hcC5nbWFpbC5jb20vMDAgLSBFVkVOVEkvZGFyaW8ubmVyaUBzb3VyY2VzZW5zZS5jb20="] > .container > .icon,
+#folderTree li[id="all-aW1hcDovL2RhcmlvLm5lcmklNDBzb3VyY2VzZW5zZS5jb21AaW1hcC5nbWFpbC5jb20vMDAgLSBFVkVOVEkvcGVjcmVtb25lYXBw"] > .container > .icon
+{
+  background-image: url("chrome://messenger/skin/icons/new/compact/calendar.svg") !important;
+}
+
+/* Use gear icon */
+#folderTree li[id="all-aW1hcDovL2RhcmlvLm5lcmklNDBzb3VyY2VzZW5zZS5jb21AaW1hcC5nbWFpbC5jb20vMDEgLSBBdHRpdml0w6A="] > .container > .icon {
+  background-image: url("chrome://messenger/skin/icons/new/compact/settings.svg") !important;
+}
+
+/* Use chat icon */
+#folderTree li[id="all-aW1hcDovL2RhcmlvLm5lcmklNDBzb3VyY2VzZW5zZS5jb21AaW1hcC5nbWFpbC5jb20vUm9ja2V0IENoYXQ="] > .container > .icon {
+  background-image: url("chrome://messenger/skin/icons/new/compact/chat.svg") !important;
+}
